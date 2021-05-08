@@ -13,7 +13,7 @@
   --message-padding: 10px;
   --message-spacing: 10px;
 
-  --nitro-display:  none;
+  --nitro-display:  block;
 }
 
 :root {
@@ -34,37 +34,6 @@
   --channels-default: var(--text-normal);
   --version: '0.0.0';
   --switch-color-backup: rgb(var(--discord-green)) !important;
-}
-
-/* [mask='url(#svg-mask-status-online-mobile)'] {
-  display: none;
-} */
-
-[mask='url(#svg-mask-status-online-mobile)'][width='10'] {
-  mask: url(https://discord.com/channels/86004744966914048/123136820409139200#svg-mask-status-online) !important;
-  x: 22;
-  y: 22;
-  width: 10px !important;
-  height: 10px !important;
-}
-
-[mask='url(#svg-mask-status-online-mobile)'][width='16'] {
-  mask: url(https://discord.com/channels/86004744966914048/123136820409139200#svg-mask-status-online) !important;
-  x: 60;
-  y: 60;
-  width: 16px !important;
-  height: 16px !important;
-}
-
-/* MASK CHANGE (WRAPPER FOR THE ICON OR STH) */
-
-[mask='url(#svg-mask-avatar-status-mobile-32)'],
-[mask='url(#4df89d3d-bd22-4e14-bfa7-d0113ce9ad0a)'] {
-  mask: url(https://discord.com/channels/86004744966914048/123136820409139200#svg-mask-avatar-status-round-32) !important;
-}
-
-[mask='url(#svg-mask-avatar-status-mobile-80)'] {
-  mask: url(https://discord.com/channels/86004744966914048/123136820409139200#svg-mask-avatar-status-round-80);
 }
 
 .theme-light {
@@ -109,6 +78,57 @@
   --background-secondary: var(--background-alt);
   --background-secondary-alt: var(--background-alt);
   --background-tertiary: var(--background-alt);
+}
+
+/* [mask='url(#svg-mask-status-online-mobile)'] {
+  display: none;
+} */
+
+/* [mask='url(#svg-mask-status-online-mobile)'][width='10'] {
+  mask: url(https://discord.com/channels/86004744966914048/123136820409139200#svg-mask-status-online) !important;
+  x: 22;
+  y: 22;
+  width: 10px !important;
+  height: 10px !important;
+}
+
+[mask='url(#svg-mask-status-online-mobile)'][width='16'] {
+  mask: url(https://discord.com/channels/86004744966914048/123136820409139200#svg-mask-status-online) !important;
+  x: 60;
+  y: 60;
+  width: 16px !important;
+  height: 16px !important;
+} */
+
+/* MASK CHANGE (WRAPPER FOR THE ICON OR STH) */
+/* 
+[mask='url(#svg-mask-avatar-status-mobile-32)'] {
+  mask: url(https://discord.com/channels/86004744966914048/123136820409139200#svg-mask-avatar-status-round-32) !important;
+}
+
+[mask='url(#svg-mask-avatar-status-mobile-80)'] {
+  mask: url(https://discord.com/channels/86004744966914048/123136820409139200#svg-mask-avatar-status-round-80);
+} */
+
+[style='background-color: rgb(67, 181, 129); color: rgb(255, 255, 255);'],
+[style='background-color: rgba(67, 181, 129, 0.2);color: rgb(67, 181, 129);'] {
+  background-color: rgb(var(--discord-green)) !important;
+  color: var(--text-focus) !important;
+}
+
+[aria-controls='Discord Nitro-tab'] {
+  color: transparent !important;
+  font-size: 0px;
+  line-height: 0;
+}
+
+[aria-controls='Discord Nitro-tab']:after {
+  content: 'Dogecord Nitro';
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: var(--text-focus) !important;
 }
 
 /* HIDES NITRO TAB IN DM'S */
