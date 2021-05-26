@@ -1,26 +1,54 @@
 /**
- * @name Dogecord
+ * @name MinimalCord Remastered
  * @author m2v#7180
- * @version 0.0.0
- * @description Stolen from Gibbu
+ * @version 0.0.1
+ * @description Forked from Gibbu
  * @authorId 174868361040232450
  * @donate https://paypal.me/IanRGibson
  * @source https://github.com/monstrousdev/themes/theme-files/Reborn.theme.css
 */
 
 :root {
+  --rs-online-color: rgb(var(--discord-green)) !important;
+  --rs-idle-color: #f9fd4d !important;
+  --rs-dnd-color: rgb(var(--discord-red)) !important;
+  --rs-offline-color: #3d4b5f !important;
+  --rs-streaming-color: #643da7 !important;
+  --rs-invisible-color: #3d4b5f !important;
+}
+
+[style='background-color: rgb(59, 165, 92);'] {
+  background-color: var(--rs-online-color) !important;
+}
+
+[style='background-color: rgb(250, 166, 26);'] {
+  background-color: var(--rs-idle-color) !important;
+}
+
+[style='background-color: rgb(237, 66, 69);'] {
+  background-color: var(--rs-dnd-color) !important;
+}
+
+[style='background-color: rgb(116, 127, 141);'] {
+  background-color: var(--rs-offline-color) !important;
+}
+
+:root {
   --accent: 253, 77, 77; /* rgb(253, 77, 77) */
+  --accent: 0, 122, 255; /* rgb(0, 122, 255) */
   --message-padding: 10px;
   --message-spacing: 10px;
 
-  --nitro-display:  block;
+  --nitro-display: block;
 }
 
 :root {
   --border-radius: 0.5rem;
-  --discord-green: 67 181 255; /* rgb(67, 181, 255) */
+  --discord-green: 67, 181, 255; /* rgb(67, 181, 255) */
+  --discord-green: 0, 122, 255; /* rgb(0, 122, 255) */
   --discord-yellow: 219 171 9;
   --discord-red: 215 58 73;
+  --discord-red: 255, 59, 48;
   --discord-purple: 89 54 149;
   --discord-invisible: 117 128 142;
   --discord-nitro: 255 115 250;
@@ -74,41 +102,39 @@
   --scrollbar-colour: var(--background-light);
   --edit-message-box: var(--background-light);
   --message-background: var(--background-alt);
+  --background-floating: var(--background);
 
   --background-secondary: var(--background-alt);
   --background-secondary-alt: var(--background-alt);
   --background-tertiary: var(--background-alt);
 }
-
-/* [mask='url(#svg-mask-status-online-mobile)'] {
+.lookFilled-1Gx00P.colorRed-1TFJan {
+  background-color: rgb(var(--discord-red));
+}
+#app-mount .wrapper-3t9DeA foreignObject[mask*='mobile']:after {
   display: none;
-} */
-
-/* [mask='url(#svg-mask-status-online-mobile)'][width='10'] {
-  mask: url(https://discord.com/channels/86004744966914048/123136820409139200#svg-mask-status-online) !important;
-  x: 22;
-  y: 22;
-  width: 10px !important;
-  height: 10px !important;
 }
 
-[mask='url(#svg-mask-status-online-mobile)'][width='16'] {
-  mask: url(https://discord.com/channels/86004744966914048/123136820409139200#svg-mask-status-online) !important;
-  x: 60;
-  y: 60;
-  width: 16px !important;
-  height: 16px !important;
-} */
-
-/* MASK CHANGE (WRAPPER FOR THE ICON OR STH) */
-/* 
-[mask='url(#svg-mask-avatar-status-mobile-32)'] {
-  mask: url(https://discord.com/channels/86004744966914048/123136820409139200#svg-mask-avatar-status-round-32) !important;
+.section-2gLsgF {
+  background-color: var(--background-light);
 }
 
-[mask='url(#svg-mask-avatar-status-mobile-80)'] {
-  mask: url(https://discord.com/channels/86004744966914048/123136820409139200#svg-mask-avatar-status-round-80);
-} */
+.lookOutlined-3sRXeN.colorRed-1TFJan {
+  color: rgb(var(--discord-red));
+  border-color: rgb(var(--discord-red));
+}
+
+.channelTextAreaDisabled-8rmlrp .scrollableContainer-2NUZem {
+  opacity: 0.8;
+}
+
+[aria-controls='ADD_FRIEND-tab'] {
+  background-color: rgb(var(--discord-green)) !important;
+}
+
+.container-lRFx4q {
+  background-color: var(--background);
+}
 
 [style='background-color: rgb(67, 181, 129); color: rgb(255, 255, 255);'],
 [style='background-color: rgba(67, 181, 129, 0.2);color: rgb(67, 181, 129);'] {
@@ -123,12 +149,38 @@
 }
 
 [aria-controls='Discord Nitro-tab']:after {
-  content: 'Dogecord Nitro';
+  content: 'MinimalCord Nitro';
   font-size: 16px;
   line-height: 20px;
   display: flex;
   align-items: center;
-  color: var(--text-focus) !important;
+  color: var(--interactive-normal) !important;
+}
+
+.colorable-1bkp8v.red-33-Lnk.active-1QRrIS,
+.colorable-1bkp8v.red-33-Lnk:hover {
+  background-color: rgb(var(--accent)) !important;
+}
+
+.theme-dark .lookFilled-1Gx00P.colorPrimary-3b3xI6 {
+  background-color: var(--background-light);
+}
+
+.theme-dark .lookFilled-1Gx00P.colorPrimary-3b3xI6:active,
+.theme-dark .lookFilled-1Gx00P.colorPrimary-3b3xI6:hover {
+  background-color: var(--background-light-alt);
+}
+
+.theme-dark .quickSelectPopout-X1hvgV {
+  background-color: var(--background-light);
+}
+
+.theme-dark .quickSelectPopoutOption-opKBx9:hover {
+  background-color: var(--background-alt);
+}
+
+.theme-dark .friendSelected-1sa4bG {
+  background-color: var(--background-alt);
 }
 
 /* HIDES NITRO TAB IN DM'S */
@@ -139,7 +191,10 @@
 .bd-switch-body,
 .bd-switch .bd-switch-symbol path,
 *[style='opacity: 1; background-color: rgb(114, 118, 125);'] {
-  background-color: var(--background-light) !important;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+.icon-Zc-uZZ {
+  display: none;
 }
 /* Usernames */
 .username-1A8OIy,
@@ -221,16 +276,6 @@
   border-color: rgb(var(--discord-green)) !important;
   background-color: rgb(var(--discord-green)) !important;
 }
-.homeIcon-FuNwkv path {
-  fill: transparent;
-}
-.homeIcon-FuNwkv {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40' fill='none' style='&%2310;'%3E%3Cpath d='M5.30153 22.1408C5.18104 21.2845 5.663 20.4282 6.38593 20.0613C7.95229 19.0827 9.88011 18.9604 11.567 19.6943C12.1694 20.0613 12.7718 20.3059 13.3743 20.7952C13.9767 21.1622 14.2177 22.0185 13.8562 22.7524C13.3743 23.6087 12.8923 24.3426 12.1694 25.0766C10.844 26.7891 8.43424 27.0337 6.62691 25.6882C6.50642 25.5659 6.26544 25.4435 6.14495 25.1989C5.54251 24.3426 5.18104 23.2417 5.30153 22.1408Z' fill='black'/%3E%3Cpath d='M25.664 17.6147C24.9411 17.4924 24.3387 17.4924 23.7362 17.2477C23.1338 17.0031 22.8928 16.3915 23.0133 15.6575C23.3747 13.945 24.8206 12.7217 26.5075 12.3548C28.3148 11.9878 30.1221 12.9664 30.9655 14.6789C31.086 14.9236 30.8451 15.4129 30.8451 15.7798H30.6041V14.8012L29.3992 16.2691C28.6763 17.0031 27.7123 17.3701 26.6279 17.2477C26.146 17.2477 26.0255 16.8808 26.0255 16.3915C26.0255 15.7798 26.0255 15.2905 26.146 14.6789C26.2665 14.1896 26.5075 13.578 26.7484 13.0887C26.0255 12.7217 25.0616 13.3334 24.3387 14.5566C23.8567 15.5352 24.2182 16.3915 25.664 17.6147Z' fill='black'/%3E%3Cpath d='M22.6518 31.315C20.6035 31.9266 18.5551 33.0275 16.2659 32.5382C15.9044 32.4159 15.5429 32.2935 15.1815 32.1712C13.4946 31.4373 11.6873 30.948 9.87994 30.8257C8.43408 30.581 7.1087 30.0917 5.90381 29.3578C6.14479 29.2354 6.38576 29.2354 6.62674 29.2354C7.83163 28.9908 9.15701 29.2354 10.3619 29.7247C11.8078 30.4587 13.2536 30.8257 14.6995 31.6819C15.6634 32.0489 16.7478 32.1712 17.7117 31.8042C18.7961 31.5596 19.76 31.315 20.8444 31.0703C21.4469 31.0703 22.0493 31.0703 22.6518 31.0703V31.315Z' fill='black'/%3E%3Cpath d='M13.2538 10.8867C12.8924 9.78583 11.567 9.17421 10.4826 9.6635C10.3621 9.6635 10.3621 9.6635 10.2416 9.78583C9.27769 10.1528 8.79573 11.0091 8.67524 11.9877C8.67524 12.11 8.67524 12.3546 8.55476 12.477C8.31378 13.5779 8.67525 13.9448 9.75965 14.0672C10.1211 14.0672 10.4826 14.0672 10.844 14.0672C11.9284 14.0672 12.8924 13.3332 13.2538 12.2323C13.3743 11.8653 13.3743 11.376 13.2538 10.8867ZM10.3621 13.8225C9.63916 13.7002 9.1572 13.0886 9.1572 12.477C9.27769 11.2537 10.1211 10.2751 11.326 10.1528C9.39818 11.0091 9.63916 12.3546 10.3621 13.8225Z' fill='black'/%3E%3C/svg%3E");
-  background-position: center;
-  background-repeat: no-repeat;
-  min-width: 30px;
-  min-height: 30px;
-}
 
 .ownerIcon-2NH9FM {
   color: rgb(var(--accent));
@@ -252,7 +297,7 @@
 }
 
 .bd-button.bd-button-danger {
-  background-color: rgb(var(--accent));
+  background-color: rgb(var(--discord-red));
 }
 
 .theme-dark .card-3DjzTQ,
@@ -395,7 +440,7 @@ span:not([class*='spinner-']):not([class*='spinnerItem']) {
 }
 #app-mount .guilds-1SWlCJ .scrollerBase-289Jih,
 .guildSidebar-2OCzWB {
-  background: var(--background-dark);
+  background: var(--background);
 }
 #app-mount .guilds-1SWlCJ .scrollerBase-289Jih::-webkit-scrollbar {
   display: none;
@@ -413,7 +458,7 @@ span:not([class*='spinner-']):not([class*='spinnerItem']) {
 }
 #app-mount .circleIconButton-1QV--U:hover {
   color: #fff;
-  background: rgb(var(--discord-green) / 1);
+  background: rgb(var(--discord-green));
 }
 
 #app-mount .expandedFolderBackground-1cujaW {
@@ -1203,7 +1248,7 @@ span:not([class*='spinner-']):not([class*='spinnerItem']) {
 #app-mount
   .layer-3QrUeG[aria-label*='_SETTINGS']
   .sidebarRegionScroller-3MXcoP {
-  background: var(--background-dark);
+  background: var(--background);
 }
 #app-mount .layer-3QrUeG[aria-label*='_SETTINGS'] .contentRegionScroller-26nc1e,
 #app-mount .layer-3QrUeG[aria-label*='_SETTINGS'] .contentRegion-3nDuYy {
@@ -1348,4 +1393,10 @@ span:not([class*='spinner-']):not([class*='spinnerItem']) {
 #app-mount .modalTextContainer-ITvzbi {
   background: var(--background-dark);
   border: none;
+}
+
+/* SOME TEXT TOOL PLUGIN */
+
+.bf-toolbar::before {
+  background-color: var(--background-light) !important;
 }
